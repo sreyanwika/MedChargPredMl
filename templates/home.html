@@ -8,11 +8,64 @@
 <link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
 <link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
 <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<style>
+    html, body {
+    height: 100%;
+}
 
+html {
+    display: table;
+    margin: auto;
+}
+
+body {
+    display: table-cell;
+    vertical-align: middle;
+}
+  @import url( 
+'https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap'); 
+    .dis{ 
+      display: inline-block; 
+      overflow: hidden; 
+      white-space: nowrap; 
+    }
+    .dis:first-of-type{ 
+      animation: appear 6s infinite; 
+    } 
+    .dis:last-of-type{ 
+      animation: reveal 6s infinite; 
+    } 
+    .dis:last-of-type span{ 
+      font-size: 33px; 
+      color: #808000; 
+      animation: slide 6s infinite; 
+    } 
+    @keyframes appear{ 
+      0%{opacity: 0;} 
+      20%{opacity: 1;} 
+      80%{opacity: 1;} 
+      100%{opacity: 0;} 
+    } 
+    @keyframes slide{ 
+      0%{margin-left:-800px;} 
+      20%{margin-left:-800px;} 
+      35%{margin-left:0px;} 
+    100%{margin-left:0px;} 
+    } 
+    @keyframes reveal{ 
+      0%{opacity: 0; width: 0px;} 
+      20%{opacity: 1; width: 0px;} 
+      30%{width: 655px;} 
+      80%{opacity: 1;} 
+      100%{opacity: 0; width: 655px;} 
+    } 
   
+</style>
+
 </head>
 
-<body>
+<body bgcolor="LightGray">
  <div class="login">
 	<h1>Medical Charges Price Prediction</h1>
 
@@ -22,7 +75,7 @@
       <input type="text" name="BMI" placeholder="BMI" required="required" /><br>
 
     	<input type="text" name="CHILDREN" placeholder="CHILDREN" required="required" /><br>
-        <input type="text" name="SMOKE" placeholder="SMOKE" required="required" /><br>
+        <input type="text" name="SMOKE" placeholder="SMOKE(yes->1 r no->0)" required="required" /><br>
         
        
 
@@ -35,6 +88,11 @@
    
  </div>
  {{prediction_text}}
+ <br>
+ <br>
+      <div class="dis"> 
+         <span>Thank You For visiting MedicalInsurance Application</span> 
+      </div> 
 
 </body>
 </html>
